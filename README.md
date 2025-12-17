@@ -25,7 +25,7 @@ Pour lancer le programme principal :
 ```bash
 python main.py
 ```
-Pour lancer le programme principal :
+Pour lancer les tests :
 ```bash
 python test.py
 ```
