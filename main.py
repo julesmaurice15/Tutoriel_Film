@@ -20,6 +20,6 @@ realisateur1 = Realisateur("Quentin Tarantino")
 realisateur1.ajouter_film(kill_bill)
 realisateur1.ajouter_film(pulp_fiction)
 
-print(realisateur1.stats())
+print(realisateur1.afficher_stats())
 print(kill_bill.description())
 print(pulp_fiction.description())

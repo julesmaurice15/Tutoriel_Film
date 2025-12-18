@@ -17,10 +17,13 @@ class Realisateur:
             self._films.append(film)
             film.set_realisateur(self)
 
-    def stats(self):
+    def afficher_stats(self):
+        t = self.calcul_stats()
+        res = f"Le réalisateur {self._nom} a produit {len(self._films)} films pour une durée de {t} min."
+        return res
+
+    def calcul_stats(self):
         t = 0
         for f in self._films:
             t += f.get_duree()
-            
-        res = f"Le réalisateur {self._nom} a produit {len(self._films)} films pour une durée de {t} min."
-        return res
+        return t
