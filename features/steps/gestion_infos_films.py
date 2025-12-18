@@ -6,7 +6,7 @@ from categorie import Categorie
 def step_impl_creation(context):
     context.mon_film = Film()
 
-@when('je définis la catégorie sur "{nom_categorie}"')
+@given('je définis la catégorie sur "{nom_categorie}"')
 def step_impl_categorie(context, nom_categorie):
     ma_categorie = Categorie()
     ma_categorie.set_nom(nom_categorie)

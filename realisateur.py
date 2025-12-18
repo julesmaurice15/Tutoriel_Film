@@ -12,6 +12,9 @@ class Realisateur:
     def set_nom(self, nom: str):
         self._nom = nom
 
+    def get_films(self):
+        return self._films
+
     def ajouter_film(self, film: Film):
         if film not in self._films:
             self._films.append(film)

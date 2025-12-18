@@ -23,6 +23,10 @@ class TestFilm(unittest.TestCase):
     def test_set_realisateur(self):
         self.assertEqual("Quentin Tarantino", self.real.get_nom())
 
+    def test_liste_films_vide(self):
+        nouveau_real = Realisateur("Inconnu")
+        self.assertEqual(nouveau_real.afficher_stats(), "Le réalisateur Inconnu a produit 0 films pour une durée de 0 min.")
+
     def test_set_date_sortie(self):
         self.kill_bill.set_date_sortie("2003/10/29")
         self.assertEqual("2003/10/29", self.kill_bill.get_date_sortie())
