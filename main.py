@@ -16,8 +16,7 @@ pulp_fiction.set_duree(144)
 pulp_fiction.set_date_sortie("1994/01/01")
 pulp_fiction.set_categorie(categorie1)
 
-realisateur1 = Realisateur()
-realisateur1.set_nom("Quentin Tarantino")
+realisateur1 = Realisateur("Quentin Tarantino")
 realisateur1.ajouter_film(kill_bill)
 realisateur1.ajouter_film(pulp_fiction)
 
