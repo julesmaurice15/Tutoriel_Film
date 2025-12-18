@@ -5,6 +5,7 @@ class Film:
         self._duree = 0
         self._date_sortie = "2001/01/01"
         self._categorie = None 
+        self._realisateur = None
 
     def get_duree(self) -> int:
         return self._duree
@@ -23,6 +24,12 @@ class Film:
 
     def get_categorie(self) -> Categorie:
         return self._categorie
+    
+    def set_realisateur(self, realisateur: "Realisateur"):
+        self._realisateur = realisateur
+
+    def get_realisateur(self) -> "Realisateur":
+        return self._realisateur
 
     def description(self) -> str:
         if self._categorie:

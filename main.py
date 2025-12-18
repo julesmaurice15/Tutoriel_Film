@@ -1,15 +1,26 @@
-from film import Categorie, Film
+from film import Film
+from categorie import Categorie
+from realisateur import Realisateur
 
-# 1. Création de la catégorie
-ma_categorie = Categorie()
-ma_categorie.set_nom("Science-Fiction")
+categorie1 = Categorie()
+categorie1.set_nom("Action")
 
-# 2. Création du film
-mon_film = Film()
-mon_film.set_duree(120)
-mon_film.set_date_sortie("2023/10/25")
-mon_film.set_categorie(ma_categorie)
 
-# 3. Affichage de la description
-print(mon_film.description())
-# Résultat: Je suis un film de catégorie Science-Fiction et de durée 120 sorti en 2023/10/25
+kill_bill = Film()
+kill_bill.set_duree(111)
+kill_bill.set_date_sortie("2003/10/29")
+kill_bill.set_categorie(categorie1)
+
+pulp_fiction = Film()
+pulp_fiction.set_duree(144)
+pulp_fiction.set_date_sortie("1994/01/01")
+pulp_fiction.set_categorie(categorie1)
+
+realisateur1 = Realisateur()
+realisateur1.set_nom("Quentin Tarantino")
+realisateur1.ajouter_film(kill_bill)
+realisateur1.ajouter_film(pulp_fiction)
+
+print(realisateur1.stats())
+print(kill_bill.description())
+print(pulp_fiction.description())
