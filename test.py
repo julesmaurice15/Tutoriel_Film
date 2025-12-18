@@ -1,5 +1,6 @@
 import unittest
 from film import Film, Categorie
+from realisateur import Realisateur
 
 class TestFilm(unittest.TestCase):
 
@@ -7,6 +8,7 @@ class TestFilm(unittest.TestCase):
     def setUp(self):
         self.kill_bill = Film()
         self.action = Categorie()
+        self.real = Realisateur("Quentin Tarantino")
         
         self.action.set_nom("Action")
         self.kill_bill.set_categorie(self.action)
@@ -17,6 +19,9 @@ class TestFilm(unittest.TestCase):
     def test_set_duree(self):
         self.kill_bill.set_duree(111)
         self.assertEqual(111, self.kill_bill.get_duree())
+
+    def test_set_realisateur(self):
+        self.assertEqual("Quentin Tarantino", self.real.get_nom())
 
     def test_set_date_sortie(self):
         self.kill_bill.set_date_sortie("2003/10/29")
